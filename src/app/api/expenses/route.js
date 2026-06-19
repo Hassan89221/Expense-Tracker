@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import prisma from "@/lib/db";
 import { CATEGORIES, isValidCategory, isValidAmount, isValidDate } from "@/lib/constants";
 
+export const dynamic = "force-dynamic";
+
 // GET /api/expenses — list expenses with optional category filter
 export async function GET(request) {
   const { searchParams } = new URL(request.url);

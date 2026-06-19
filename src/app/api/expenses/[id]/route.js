@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import prisma from "@/lib/db";
 import { CATEGORIES, isValidCategory, isValidAmount, isValidDate } from "@/lib/constants";
 
+export const dynamic = "force-dynamic";
+
 // PUT /api/expenses/[id] — update an expense
 export async function PUT(request, { params }) {
   const { id } = await params;

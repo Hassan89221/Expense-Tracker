@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import prisma from "@/lib/db";
 import { CATEGORIES } from "@/lib/constants";
 
+export const dynamic = "force-dynamic";
+
 // GET /api/expenses/summary — monthly total + per-category breakdown
 export async function GET() {
   const now = new Date();
